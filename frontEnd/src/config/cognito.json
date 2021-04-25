@@ -1,0 +1,5 @@
+{
+  "aws_cognito_region": "eu-central-1",
+  "aws_user_pools_id": "eu-central-1_3G4XExI3o",
+  "aws_user_pools_web_client_id": "6fmkmhcd95pqv62macq2nkf6cl"
+}

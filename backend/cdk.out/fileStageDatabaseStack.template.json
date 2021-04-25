@@ -1,0 +1,238 @@
+{
+  "Resources": {
+    "todosTable02A806A9": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "KeySchema": [
+          {
+            "AttributeName": "PK",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "SK",
+            "KeyType": "RANGE"
+          }
+        ],
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "PK",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "SK",
+            "AttributeType": "S"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST",
+        "TableName": "todos"
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "fileStageDatabaseStack/todosTable/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Modules": "aws-cdk=1.89.0,@aws-cdk/assets=1.46.0,@aws-cdk/aws-apigateway=1.46.0,@aws-cdk/aws-applicationautoscaling=1.46.0,@aws-cdk/aws-autoscaling-common=1.46.0,@aws-cdk/aws-cloudwatch=1.46.0,@aws-cdk/aws-cognito=1.46.0,@aws-cdk/aws-dynamodb=1.46.0,@aws-cdk/aws-ec2=1.46.0,@aws-cdk/aws-events=1.46.0,@aws-cdk/aws-iam=1.46.0,@aws-cdk/aws-kms=1.46.0,@aws-cdk/aws-lambda=1.46.0,@aws-cdk/aws-lambda-event-sources=1.46.0,@aws-cdk/aws-logs=1.46.0,@aws-cdk/aws-s3=1.46.0,@aws-cdk/aws-s3-assets=1.46.0,@aws-cdk/aws-s3-notifications=1.46.0,@aws-cdk/aws-sns=1.46.0,@aws-cdk/aws-sns-subscriptions=1.46.0,@aws-cdk/aws-sqs=1.46.0,@aws-cdk/aws-ssm=1.46.0,@aws-cdk/cdk-assets-schema=1.46.0,@aws-cdk/cloud-assembly-schema=1.46.0,@aws-cdk/core=1.46.0,@aws-cdk/custom-resources=1.46.0,@aws-cdk/cx-api=1.46.0,@aws-cdk/region-info=1.46.0,jsii-runtime=node.js/v12.19.0"
+      },
+      "Condition": "CDKMetadataAvailable"
+    }
+  },
+  "Outputs": {
+    "ExportsOutputFnGetAtttodosTable02A806A9Arn917F468E": {
+      "Value": {
+        "Fn::GetAtt": [
+          "todosTable02A806A9",
+          "Arn"
+        ]
+      },
+      "Export": {
+        "Name": "fileStageDatabaseStack:ExportsOutputFnGetAtttodosTable02A806A9Arn917F468E"
+      }
+    },
+    "ExportsOutputReftodosTable02A806A998571705": {
+      "Value": {
+        "Ref": "todosTable02A806A9"
+      },
+      "Export": {
+        "Name": "fileStageDatabaseStack:ExportsOutputReftodosTable02A806A998571705"
+      }
+    }
+  },
+  "Conditions": {
+    "CDKMetadataAvailable": {
+      "Fn::Or": [
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-northeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ap-southeast-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "ca-central-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "cn-northwest-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-central-1"
+              ]
+            }
+          ]
+        },
+        {
+          "Fn::Or": [
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-north-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "eu-west-3"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "me-south-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "sa-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-east-2"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-1"
+              ]
+            },
+            {
+              "Fn::Equals": [
+                {
+                  "Ref": "AWS::Region"
+                },
+                "us-west-2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
